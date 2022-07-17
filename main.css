@@ -1,3 +1,46 @@
-body {
-    background-color: aqua;
-}
+html {
+    background: #018DED url(https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg://www.pexels.com/photo/view-of-street-from-a-glass-window-531880/);
+    background-size: cover 
+  }
+
+  body {
+    margin: 0;
+    display: flex;
+    flex: 1;
+    min-height: 50vh;
+    align-items: center;
+  }
+
+  .clock {
+    width: 30rem;
+    height: 30rem;
+    border: 10px solid rgb(64, 160, 167);
+    border-radius: 50%;
+    margin: 50px auto;
+    position: relative;
+    padding: 1rem;
+    box-shadow:
+      0 0 0 4px rgba(0,0,0,0.1),
+      inset 0 0 0 3px #daf3de,
+      inset 0 0 10px black,
+      0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .clock-face {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-3px); /* account for the height of the clock hands */
+  }
+
+  .hand {
+    width: 50%;
+    height: 6px;
+    background: rgb(32, 38, 39);
+    position: absolute;
+    top: 50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
